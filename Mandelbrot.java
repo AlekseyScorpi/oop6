@@ -13,8 +13,8 @@ public class Mandelbrot extends FractalGenerator{
 
     @Override
     public int numIterations(double x0, double y0) {
-        int i = 0;
-        double x = 0, y = 0;
+        int i = 0;          //z^2 = (x + y(i))^2 =
+        double x = 0, y = 0; // = x^2 + 2xyi - y^2
         while (x * x + y * y <= 4 && i < MAX_ITERATIONS){
             double xtemp = x * x - y * y + x0;
             y = 2 * x * y + y0;
